@@ -1,0 +1,32 @@
+@keyframes fading {
+	from { opacity: 0; }
+	50% {opacity: 1.0; }
+	to {opacity: 0;	}
+}
+@-webkit-keyframes fading {
+	from { opacity: 0; }
+	50% {opacity: 1.0; }
+	to {opacity: 0;	}
+}
+
+@keyframes slidenfade {
+	from {
+		margin-left: 100%;
+		opacity: 0;
+	}
+	
+	to {
+		margin-left:0%;
+		opacity: 1;
+	}
+	
+}
+@keyframes colourfade {
+	from {
+		color: white;
+	}
+	to {
+		color: #089d91;
+	}
+	
+}

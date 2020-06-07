@@ -1,0 +1,74 @@
+---
+layout: default
+title: Samuel Durrant-Walker
+---
+
+<!-- Projects Section -->
+<div class = "grid-container" id = "project-head">
+	<div class = "grid-70 prefix-15 tablet-grid-40 tablet-prefix-30 mobile-grid-100">
+		<h2 style = "background-color:#171717;"><span>Projects</span></h2>
+	</div>
+</div>
+
+	{% for post in site.categories.project  %}
+	<div class = "grid-container mySlides fade" id = "project-section" style="margin-left:0;padding:0;">
+	<!-- Title and Technical -->
+		<div class = "tablet-grid-40 grid-40 mobile-grid-100" id = "project-title">
+			<h2>{{ post.title }}</h2>
+		</div>
+		<div class = "tablet-grid-20 grid-30 hide-on-mobile" style = "color:white;">
+			<p>boo</p>
+		</div>
+		<div class = "tablet-grid-40 grid-30 hide-on-mobile" id = "project-title2";>
+			<div id = "textrot">
+				<h2>{{ post.technical }}</h2>
+			</div>
+		</div>
+		<!-- Image and Description -->
+
+		<div class = "tablet-grid-100 grid-40 suffix-10 prefix-10">
+			<img src = "{{ post.image }}" alt = "{{ post.imgalt }}" id = "postimage">
+		</div>
+		
+		<div class = "tablet-grid-70 tablet-prefix-15" id = "description">
+		<p>{{ post.excerpt }}</p>
+		</div>
+		
+		
+		
+		
+		<!-- Read more and next -->
+			<div class = "tablet-grid-40 grid-40 mobile-grid-100" id = "project-title">
+				<button id = "readbutton"><h2><i>Read More</i></h2></button>
+			</div>
+				<div id="myModal" class="modal">
+					<!-- Modal content -->
+					  <div class="modal-content">
+					  <div class = "grid-container">
+						<div class = "tablet-grid-90 tablet-prefix-5">
+							<span class="close">&times;</span>
+							<div class = "tablet-grid-90 tablet-prefix-5">
+							<p>{{post.content}}</p>
+							</div>
+						 </div>
+						 </div>
+					  </div>
+				</div>
+			<div class = "tablet-grid-20 grid-30 hide-on-mobile" style = "color:white;">
+				<p>boo</p>
+			</div>
+			<div class = "tablet-grid-40 grid-30 hide-on-mobile" id = "project-title2";>
+				<div id = "textrot">
+					<h2>{{ post.create }}</h2>
+				</div>
+			</div>
+		
+		
+		
+	</div>
+	{% endfor %}
+
+
+
+
+
